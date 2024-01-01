@@ -103,7 +103,7 @@ export async function getSimilarProducts(productId: string) {
       if(!product) return;
   
       const userExists = product.users.some((user: User) => user.email === userEmail);
-  
+      console.log(userExists);
       if(!userExists) {
         product.users.push({ email: userEmail });
   
